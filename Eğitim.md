@@ -16,6 +16,30 @@ public class HelloWorld {
 }
 ```
 
+Public class HelloWorld sınıfımızın ana gövdesidir. **public**, değişkeni bir erişim metodudur.
+
+Uygulamalarda main metodunun public olmasındaki neden budur.
+
+**static**, sınıf tarafından paylaşıldığını belirtir.
+
+**void**, main metodunun ekrana yazdırma dışından geri değer döndürmediğini ifade eder.
+
+Java'da tüm uygulamalar ***main*** metotundan başlar.
+
+**String args[]:** Parantezin içinde yöntemin aldığı parametreleri belirleriz.
+
+* *"String"* sınıf adı,
+* *"args"* da parametre adıdır.
+* "[]" ise args'ın bir dizi(array) olduğunu belirtiyor.
+
+Süslü parantezlerin içi programımızı içeren kısımdır. Bu süslü parantezler içinde yazılan her kod çalıştırılır.
+
+* System.out.print(); Ekrana yazdırmak için kullanılır.
+* System.out.print();System.out.println();System.out.printf();  olmak üzere **3** farklı şekilde kullanımı vardır.
+  * **System.out.println();** İfadesi ekrana yazdırılacakları satır atlayarak yazdırır.
+  * **System.out.print();** ifadesi ekrana bitişik yazılar yazdırır.
+  * **System.out.printf(cıkıs formatı, cıktı alınacak ifade);** Kalıbına uygun çalışır.
+
 ### Kaynak
 
 >[Java Temel Bilgiler](https://medium.com/gokhanyavas/java-temel-bilgiler-b1f82b9fed99)
