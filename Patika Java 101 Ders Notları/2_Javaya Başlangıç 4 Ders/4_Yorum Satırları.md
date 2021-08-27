@@ -26,7 +26,7 @@ int number = 10; // Number değişkenine 10 değeri atandı.
   
 Bu tarzda yazılan açıklamalara Javadoc adı verilmektedir.Aşağıda bazı örnekleri verilmiştir:
 
-![Javadoc](..\Eklentiler\Javadoc.png)
+![Javadoc](https://raw.githubusercontent.com/SketchQ/Java101Patika/Egitim/Patika%20Java%20101%20Ders%20Notlar%C4%B1/Eklentiler/Javadoc.png)
 
 ```java
 /**
