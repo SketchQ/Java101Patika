@@ -1,7 +1,7 @@
 package Giris;
 
 public class JavaPatika {
-    public static void main(String[] args) {
+    public static void main(StringExample[] args) {
         byte a = 120;
         short b = 1000;
         int c = 10000;
