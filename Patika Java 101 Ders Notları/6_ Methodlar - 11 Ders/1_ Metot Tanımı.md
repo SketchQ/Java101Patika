@@ -1,0 +1,3 @@
+# Metot Tanımı
+
+## Metotlar (Fonksiyonlar)
