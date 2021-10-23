@@ -1,3 +1,4 @@
+package Classes;
 public class SecondClass {
     
     static void show(){

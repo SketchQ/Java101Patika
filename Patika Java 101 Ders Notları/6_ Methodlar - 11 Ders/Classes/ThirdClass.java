@@ -1,3 +1,4 @@
+package Classes;
 public class ThirdClass {
 
     // First Metot

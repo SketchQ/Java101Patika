@@ -1,3 +1,6 @@
 {
-    "java.dependency.packagePresentation": "hierarchical"
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.project.sourcePaths": [
+        "Patika Java 101 Ders Notları"
+    ]
 }
