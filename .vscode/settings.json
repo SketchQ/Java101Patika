@@ -2,5 +2,6 @@
     "java.dependency.packagePresentation": "hierarchical",
     "java.project.sourcePaths": [
         "Patika Java 101 Ders Notları"
-    ]
+    ],
+    "java.dependency.syncWithFolderExplorer": false
 }
