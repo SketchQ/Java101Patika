@@ -51,6 +51,7 @@ public class Employee {
     }
 
     public void print() {
+        System.out.println("========================");
         System.out.println("Adı \t\t: " + this.name);
         System.out.println("Maaşı \t\t: " + this.salary);
         System.out.println("Çalışma Saati \t: " + this.workHours);
