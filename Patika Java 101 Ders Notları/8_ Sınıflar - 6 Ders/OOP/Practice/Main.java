@@ -16,11 +16,18 @@ public class Main {
         // Öğrenciler
         Student s1 = new Student("İnek Şaban", "2125", "4.Sınıf", tarih, fizik, mat);
         s1.addBulkExamNote(100, 78, 50);
+        s1.addOralExamNote(70, 80, 50);
+        s1.calcAverage();
         s1.isPass();
+        s1.printStudentInfo();
         s1.printNote();
+        
         Student s2 = new Student("Güdük Necmi", "2124", "4.Sınıf", tarih, fizik, mat);
         s2.addBulkExamNote(75, 80, 60);
+        s2.addOralExamNote(75, 80, 30);
+        s2.calcAverage();
         s2.isPass();
+        s2.printStudentInfo();
         s2.printNote();
     }
 }

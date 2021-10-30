@@ -6,6 +6,7 @@ public class Course {
     String code;
     String prefix;
     int note;
+    int oralExam;
     // Ürettiğimiz sınıftan nesne alabiliriz. Sınıflar birbirinin niteliği olabilir
     Teacher teacher;
 
@@ -16,6 +17,7 @@ public class Course {
         this.prefix = prefix;
         this.teacher = teacher;
         this.note = 0;
+        this.oralExam = 0;
     }
 
     void addTeacher(Teacher teacher) {
