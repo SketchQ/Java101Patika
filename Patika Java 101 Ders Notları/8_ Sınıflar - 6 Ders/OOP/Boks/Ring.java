@@ -17,11 +17,18 @@ public class Ring {
         if (checkweight()) {
             while (f1.health > 0 && f2.health > 0) {
                 System.out.println("=========== New Round!! ==============");
-                f2.health = f1.hit(f2);
+                if(f1.coinToss()){
+                    System.out.println("Tura Atışını kazanan : " + this.f1.name);
+                    f2.health = f1.hit(f2);
+                }else{
+                    System.out.println("Tura atışını kazanan : " + this.f2.name);
+                    f1.health = f2.hit(f1);
+                }
+                //f2.health = f1.hit(f2);
                 if (isWin()) {
                     break;
                 }
-                f1.health = f2.hit(f1);
+                //f1.health = f2.hit(f1);
                 if (isWin()) {
                     break;
                 }

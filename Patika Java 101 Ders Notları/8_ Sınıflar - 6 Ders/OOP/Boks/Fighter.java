@@ -36,4 +36,15 @@ public class Fighter {
         return randomValue <= this.dodge;
     }
 
+    public boolean coinToss(){
+        double randomValue = Math.random() * 1;
+        if(randomValue > 0.5){
+            System.out.println("Tura Atışının sonucu :  Tura.");
+            return true;
+        }else{
+            System.out.println("Tura Atışının sonucu :  Yazı.");
+            return false;
+        }
+    }
+
 }
