@@ -119,3 +119,7 @@ public class Main {
 }
 
 ```
+
+### Kaynak
+
+[Patika](https://app.patika.dev/moduller/java101/pratik-boks)
