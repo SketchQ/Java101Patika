@@ -97,7 +97,7 @@ public static int[] reverse(int[] list) {
 
 ```
 
-#### Test
+#### Test 1.1
 
 **Soru 1/3**  
 Diziler hakkında hangisi yanlıştır?  
@@ -110,3 +110,95 @@ Java'da bir değişkenin dizi olduğunu hangi sembol ile belirtiriz?
 **Cevap**: []  
 
 ## Tek Boyutlu Diziler
+
+Tek boyutlu diziler basitçe, aynı türden elemanların listesini tutan bir yapıdır. Dizi oluşturmak için, önce dizide yer alacak elemanların türü belirtilir, sonra diziye bir isim verilir ve isimden sonra köşeli parantezler ( [ ve ] ) konulur.
+
+```java
+int[] numbers; // int veri tipinde bir dizi
+
+int numbers[]; // int veri tipinde bir dizi
+```
+
+Diziler new deyimiyle oluşturulur. Dizi oluştururken kapasite değeri vermek **zorunludur**. Kapasite değeri, dizinin kaç eleman barındıracağını belirtir.
+
+```java
+int[] numbers = new int[10]; // 10 elemanlı bir dizi oluşturulur.
+```
+
+Bu ifade çalıştırıldığında, hafızada 10 adet int değişken için yetecek kadar alan ayrılır. Bu alanı düzenleyebilmek için indeks numaraları kullanırız. **Dizi indeksleri 0’dan başlar** ve kapasitenin 1 eksiğine kadar gider.
+
+```java
+// Dizinin elemanlarını verelim
+numbers[0] = 10;
+numbers[1] = 15;
+numbers[2] = 20;
+numbers[3] = 25;
+numbers[4] = 30;
+
+// Bu kodlar çalıştığında dizinin elemanları aşağıdaki gibi olur.
+
+{10, 15, 20, 25, 30}
+
+// Aşağıdaki kodu çalıştırdığımızda konsola 25 yazar.
+System.out.println(numbers[3]);
+// Dizinin indiks numaralarının dışında bir indeks numarasına ulaşmaya çalışırsak hata verir.
+// IndexOutOfBoundsException 
+System.out.println(numbers[12]); // ArrayIndexOutOfBoundsException
+
+// -------------------------------------------------- 
+
+// String veri tipinde dizi oluşturalım.
+String[] weekDays = {"Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"};
+// Dizinin kapasitesi otamatik olarak belirlenir. 7 elemanlı bir dizi oluşturulur.
+String[] weekDays = new String["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+
+```
+
+### Dizinin Kapasitesini Öğrenme
+
+```java
+// her dizinin lenght adında bir özelliği bulunur.
+int[] numbers = new int[100];
+System.out.println(numbers.length); // 100 yazdırılır.
+```
+
+### Dizinin bir Elemanını Değiştirme
+
+```java
+String[] cars = {"Mercedes", "BMW", "Audi", "Fiat"};
+cars[0] = "Toyota";
+cars[1] = "Honda";
+cars[2] = "Mazda";
+
+System.out.println(cars[0]); // Toyota yazdırılır.
+```
+
+#### Test 1.2
+
+**Soru 1/3**  
+Aşağıdaki işlemin çıktısı ne olur?
+
+```java
+int[] numbers = {35,65,95};
+System.out.println(numbers.length + "," + numbers[1]); 
+// 3,65 yazdırılır.
+```
+
+**Soru 2/3**  
+**Cevap**: Yanlış.  
+**Soru 3/3**  
+Aşağıdaki işlemin çıktısı ne olur?  
+
+```java
+int[] cars, count = 3;
+cars = new int[count];
+for (int i= 0; i < cars.lenght; i++) {
+    cars[i] = (i + 1)* 2; // 2 4 6
+    for (int j = 0; j < cars.lenght; j++){
+        System.out.println(cars[j] + ","); // 2,4,6,
+    }
+}
+
+```
+
+**Cevap**: 2 , 4, 6 yazdırılır.
