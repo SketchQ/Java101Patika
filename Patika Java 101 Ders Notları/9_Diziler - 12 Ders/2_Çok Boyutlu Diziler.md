@@ -223,7 +223,7 @@ for (int i = array.lenght - 1; i >= 0; i--){
 */
 ```
 
-#### Test
+#### Test 1.1
 
 **Soru 1/3**  
 Çok boyutlu dizilerde satır ve sütun indis (index) numaraları ___ ile başlar.
@@ -266,4 +266,72 @@ public class PatikaDev {
     }
 }
 // 10
+```
+
+## ForEach Kullanımı
+
+Java'da ForEach deyimi adında da anlaşılacağı gibi bir döngüyü ifade eder. Genelde dizilerdeki ve listelerdeki elemanları daha hızlı şekilde ulaşmak için kullanılan kısa bir yöntemdir. Kısacası for döngüsünün modifiye edilmiş halidir.
+
+```java
+for (veritipi degisken : diziAdi){
+    // kod bloğu
+}
+```
+
+Tek Boyutlu dizilerde ForEach kullanımı:
+
+```java
+String[] cars = {"Mercedes", "BMW", "Audi", "Porsche", "Ferrari"};
+for (String car : cars){
+    System.out.println(car);
+}
+// çıktısı
+/* Mercedes
+   BMW
+   Audi
+   Porsche
+   Ferrari
+*/
+
+```
+
+Çok Boyutlu Dizilerde ForEach Kullanımı:
+
+```java
+int[][] matris = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+for (int[] row : matris){
+    for (int col : row){
+        System.out.print(col + " ");
+    }
+    System.out.println();
+}
+
+```
+
+### Test 1.2
+
+**Soru 1/1**  
+Aşağıdaki programın çıktısı nedir?
+
+```java
+public class PatikaDev {
+    public static void main(String[] args) {
+        int[] scores = new int[10];
+        scores = new int[3];
+        scores = new int[]{215, 234, 218, 189, 221, 290};
+
+        for (int score : scores) {
+            System.out.print(score + " ");
+        }
+
+    }
+}
+
+// Cevap
+
+// 215 234 218 189 221 290
 ```
