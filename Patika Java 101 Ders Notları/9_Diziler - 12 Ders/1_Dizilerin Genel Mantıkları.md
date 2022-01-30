@@ -1,0 +1,3 @@
+# Diziler
+
+## Dizilerin Genel Mantıkları
