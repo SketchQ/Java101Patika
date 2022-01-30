@@ -1,0 +1,3 @@
+# Diziler
+
+## Çok Boyutlu Diziler
