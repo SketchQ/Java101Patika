@@ -1,3 +1,4 @@
+package Pratikler;
 import java.lang.Math;
 
 /* Java program to guess the number
