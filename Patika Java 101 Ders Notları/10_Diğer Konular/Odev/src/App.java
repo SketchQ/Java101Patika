@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /* 
     Oyun metin tabanlıdır.
 
@@ -25,6 +27,24 @@
 
 public class App {
   public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+      int row, col, count = 0;
+
+      do {
+          if (count == 1) {
+              System.out.println("\nHatalı satır sütun tuşladınız. Tekrar Deneyiniz.");
+          }
+          System.out.println("Satır sayısını giriniz : ");
+          row = input.nextInt();
+          System.out.println("Sütun sayısını giriniz : ");
+          col = input.nextInt();
+          count =  1;
+
+      } while ((row <= 0 || col <= 0) || (row == 1 && col == 1));
       
+      
+      MineSweeper mine = new MineSweeper(row, col);
+      mine.run();
+      input.close();
   }  
 }
