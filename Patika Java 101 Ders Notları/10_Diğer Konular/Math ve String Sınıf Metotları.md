@@ -2,9 +2,11 @@
 
 ## Math Sınıfı ve Metotları
 
+import ile math sınıfını eklemek zorunda değiliz.
+
 ```java
 // Math sınıfının metotlarının kullanımı
-import java.util.Math;
+import java.util.Math; // Optional
 
 Math.MethodName(parametreler);
 
