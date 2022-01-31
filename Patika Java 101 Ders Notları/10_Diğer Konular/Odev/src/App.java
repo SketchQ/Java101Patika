@@ -23,7 +23,8 @@
     @author: Erim Serdönmez
 */
 
-public class MineSweeper {
-    
-
+public class App {
+  public static void main(String[] args) {
+      
+  }  
 }
