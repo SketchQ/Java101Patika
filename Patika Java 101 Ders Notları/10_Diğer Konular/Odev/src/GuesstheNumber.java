@@ -1,8 +1,7 @@
 import java.lang.Math;
 
-// Java program to guess the number
-
-/*
+/* Java program to guess the number
+ *
  * @author: Erim Serdönmez
  */
 

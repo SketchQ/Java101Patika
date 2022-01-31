@@ -1,3 +1,9 @@
+/*
+    Java program to check if a string is palindrome or not
+
+    @author: Erim Serdönmez
+*/
+
 public class Palindrome {
     public static void main(String[] args) {
         String input = "";
