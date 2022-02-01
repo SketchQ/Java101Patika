@@ -1,4 +1,4 @@
-# OOP Ders Notları
+# OOP Nedir? Sınıf ve Nesne Nedir?
 
 ## Nesne Yönelimli Programlama Nedir?
 
@@ -34,3 +34,29 @@ Nesne Yönelimli Programlama ile bizler yapacağımız her şeyi bilgisayarın a
 * NYP, problemleri gerçek hayattaki işlemlere göre modeller.
 
 ## Sınıf ve Nesne Kavramları
+
+### Nesne (Object) Nedir?
+
+Bildiğimiz gibi her nesnenin kendine ait *nitelikleri ve davranışları* vardır. Nesneler birbirlerinden farklıdır ve kendi varoluşlarına göre davranırlar ve kendi kimliklerine sahiptirler.
+
+* **Nitelik :** Nitelik kavramı, bir nesnenin özellikleridir ve nesnenin mevcut durumunu tanımlar. Mesela bir ördeğin rengi ve ağırlığı o ördeğin nitelikleridir. Bir ördeğimizin rengi siyah, diğer ördeğimizin rengi beyazdır. Bu durumda her iki nesne (yani ördek) nitelikleri sebebi ile birbirilerinden bağımsızdırlar.
+
+* **Davranış :** Bir nesnenin kendine özel yaptığı eylemlerdir. Yine ördek örneğine bakarsak, bir ördek uçabiliyorken diğer bir ördek fiziksel durumu gereği uçamayabilir.
+
+### Sınıf(Class) Nedir?
+
+NYP sınıflar ve nesneler üzerine kurulmuştur, *"Sınıflar"* bir problemi soyutlamak ve genelleştirmek için kullanılan yapılardır veya *kılavuzlardır*. Sınıflar, bir nesneye ait tüm özellikleri temsil eder. Bu özellikler nesnenin ne tür **nitelikleri ve davranışları** olacağını belirler.
+
+Mesela **"Araba"** bir sınıftır. Arabalara ait nitelikler **renk, hız, vites sayısı, yakıt türü vb.** bir sürü nitelik olabilir. Park sensörü, oto pilot, hız sabitleme gibi arabaların kendilerine özel davranışları da olabilir. Bir araba üretilirken, bir yapım kılavuzuna ihtiyaç vardır. Programlama da bu kılavuzlara **"Sınıf (Class)"** denir.
+
+![Class](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/oop/sinif-ve-nesne-kavramlari/figures/car.png)
+
+---
+
+#### Örnek : Banka Sınıf Tasarımı
+
+![Banka Sınıf](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/oop/sinif-ve-nesne-kavramlari/figures/banka-class.jpg)
+
+#### Örnek : Banka Nesne İlişkileri
+
+![Nesne ilişkiler](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/oop/sinif-ve-nesne-kavramlari/figures/banka-object.jpg)
