@@ -1,4 +1,4 @@
-# OOP
+# OOP Ders Notları
 
 ## Nesne Yönelimli Programlama Nedir?
 
