@@ -6,7 +6,7 @@
 
 * Problemi çözenler ise *insanlardır*.
 
-    Bilgisayar Dili (Machine Code) ===== > İnsan Dili =====> Bilgisayar Dili
+        Bilgisayar Dili (Machine Code) ===== > İnsan Dili =====> Bilgisayar Dili
 
 ### Programlama Paradigmaları
 
