@@ -33,34 +33,11 @@ Nesne yönelimli programlamada her bir nesnenin konseptini belirten yapılara s�
 
 Programlamada sınıfların niteliklerini **"değişkenler"(Variables) , davranışlarını da "metotlar"(Methods)** tanımlar.
 
-```plantuml
-@startuml
-    class class {
-        Variables - (nitelikler)
-        __
-        Methods - (Davranışlar)
-    }
-
-@enduml
-```
+![UML](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuL8ioKZDJLKepaujISwerCqlBSd9p4lbKW22v9p4uc8eMGqKWO2mnABCnAISr685NGMDlCoIr9pCx9pK8asuWlXuEDCtjIGZFmMiqYMnh2WnxyZ6e_Dp4g6AQxaSKlDIW8u00000)
 
 #### Örnek
 
-```plantuml
-@startuml
-    skinparam backgroundColor #EEEBDC
-    skinparam handwritten true
-    actor Customer
-    Customer -> "login()" : username & password
-    "login()" -> Customer : session token
-    activate "login()"
-    Customer -> "placeOrder()" : session token, order info
-    "placeOrder()" -> Customer : ok
-    Customer -> "logout()"
-    "logout()" -> Customer : ok
-    deactivate "login()"
-@enduml
-```
+![UML1](http://www.plantuml.com/plantuml/png/ROz1JWCn34NtFOKf4WA9Ng0BL37CcZEOYUb4IUoHxL1nUoAgKQHsbdR-y_ivcQDwBNdtu3CL0alaq_nxaEevCkq0eEqYBwXOu0kdT5Qf70R9el0uZkFxnt2Jcf73HQCxCRZMwn6Sl053DPT2-hzQ1pYymJxBEVBponwEK8sKiH0ymO9c5z7Gyj0p3UZm4OpCeZIN9E9L5d_GgIFtmYNZH9yQIDlpxPLNQ59IYFmjLtUFtnUGjFaVgRwQ-xYD1jgeV28EjUG_)
 
 ---
 
@@ -91,20 +68,7 @@ Syntax :
 * **Parametre Listesi (Parameter List):** Programlamada metodun aldığı parametreler tür bilgileri ile birlikte buraya yazılır.
 * **Geri Dönüş Türü (Return Type):** Metodun geri dönüş tipini belirtir.
 
-```plantuml
-@startuml
-    class Customer {
-        + name: String
-        # idno: int
-        + address: String
-        - money: int = 0
-        __
-        showMoney(): void
-        sendMoney(int amount): bool
-        withDraw(int amount): bool
-    }
-@enduml
-```
+![UML2](http://www.plantuml.com/plantuml/png/TSj1oi8m40NWVKynF_z6aOBhWb3GhIiFK68pc60o0vc9fOXtjwqG1V6jXlU-QKLDqXn3zQSE8u9SKNitrfmrUC8AflJ1YC0-YtB41FUvNB81CX4RE6doT2drFtXBt80d_Q36seGYNxg6o8JZmc47sp9qNJd5yN2SrMhTm8szVIz8zhNCxoPo9ftCcJaKCtXrXsI67-HHjKWsn_04)
 
 ## Sınıflar Arası İlişkiler
 
@@ -121,15 +85,7 @@ Yazılımlar çoğu zaman tek sınıftan oluşmazlar. Küçük programlar bile �
 
 Sınıflar arasındaki ilişkiler çizgi ile gösterilir ve çizginin üstüne ilişki şekli yazılır. Sınıflar arası ilişkiler bire bir, bire çok, bire n gibi olabilir.
 
-```plantuml
-@startuml
-    Class Customer{
-        name
-    }
-    Customer "1" - "*" Product
-    (Customer, Product) -- Order
-@enduml
-```
+![UML3](http://www.plantuml.com/plantuml/png/DOfB2W8n44JtEKMPbOfPU8E1EO1U8KmQHamdq9-5Y7SNmgGM1LNlBMfPpBc6a-t417sJRVidTRVwQXJMcbMnkbfdac_0aPQPnlYDdWBYFI8XNYEUqejlDl1vyjkyBqW93oaaOQ5MdEiV)
 
 Bu örnekte ise bir müşteri n tane ürün olabileceği gösterilmiştir. İki sınıf arasında yalnızca tek bir bağıntı çizilmesi gibi bir kısıt yoktur. En temel bağıntı ilişki tipleri aşağıdaki gibi listelenebilir;
 
@@ -147,16 +103,7 @@ Diğer bir ilişki türü ise bir sınıfın kendisiyle kurduğu ilişkidir. Bu 
 
 Nesne yönelimli programlamanın en önemli parçası türetme (inheritance)'dir. Türetme yoluyla bir sınıf başka bir sınıfın var olan özelliklerini alarak, o sınıf türünden başka bir nesneymiş gibi kullanılabilir. Bir sınıfın işlevleri türetme yoluyla genişletilecekse, türetmenin yapılacağı sınıfa taban sınıf **(super class)**, türetilmiş olan sınıfa da türemiş sınıf **(sub class)** denir. Şekilsel olarak türemiş sınıftan taban sınıfa bir ok olarak belirtilir.
 
-```plantuml
-@startuml
-    Class Şekiller {
-        + name : String
-    }
-    Şekiller <|-- Kare : extends
-    Şekiller <|-- Dikdörtgen : extends
-    Şekiller <|-- Altıgen : extends
-@enduml
-```
+![UML](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuL8ioKZDJLKepaujISwerCqlBSd9p4lbKW02vvp4ucA5e_DIipDpSbAB5Ag1eX2WhP2N2DHafH1SKfIPbmuMhmMJ2DKsDRgw2jw9HI1bgHKbgNafnTXKk6HcfnpULbIIdfg7Nw5ZJicHZQYg780aq0y0)
 
 Bu örnekte "Şekiller" sınıfına ait tüm özellikler altında üretilmiş olan, diğer sınıflara aktarılmıştır.
 
@@ -166,14 +113,7 @@ Birden fazla parçadan oluşan sınıflar arasındaki ilişkiye **"Aggregation"*
 
 Örneğin Araba sınıfını 1 Motor, 5 Koltuk ve 4 Lastik sınıflarının oluşturduğunu düşünürsek aralarındaki ilişki aşağıdaki gibi gösterilir.
 
-```plantuml
-@startuml
-    Class Araba
-    Araba o-- "1" Motor : aggregation
-    Araba o-- "5" Koltuk : aggregation
-    Araba o-- "4" Lastik : aggregation
-@enduml
-```
+![UML](http://www.plantuml.com/plantuml/png/VSuX3W8n48LXtrCywYj8mA2M8853333fDjlj99rNmUqXmQt0_U8J_-IKph7MiEEigy8NvND-9nkifMcuL777kSj30e1VmL92t4VSZTPnWkJSDGkBjQqwHbojSYp_sI7Y9iwoPPEsrtVl0m00)
 
 Asıl sınıf üretildiğinde parçaları da üretilecek ise bu ilişkiye Composite denir. Eğer Araba sınıfı oluşturulduğunda Motor, Koltuk ve Lastik sınıfları da oluşturulacak ise içi dolu dörtgen dolu olarak gösterilir.
 
@@ -181,16 +121,7 @@ Asıl sınıf üretildiğinde parçaları da üretilecek ise bu ilişkiye Compos
 
 Gerçekleştirim ilişkisi en çok kullanıcı arayüzlerinin **(user interface)** modellenmesinde kullanılır. Arayüz yalnızca method adlarını ve bunların parametrelerini içermektedir. Program yazarken, yalnızca arayüzlerin kullanılması ve arayüzü gerçekleştiren sınıfın diğer sınıflardan ayrı tutulması, yazılımın geliştirilmesi ve bakımında önemli kolaylık sağlar.
 
-```plantuml
-@startuml
-    Interface Kişiler {
-        + adSoyad : String
-    }
-    Öğrenci -[dashed]-o Kişiler 
-    Öğretmen -[dashed]-o Kişiler
-    Asistan -[dashed]-o Kişiler
-@enduml
-```
+![UML](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuL8ioKZDJLKepaujISwerCqlBSd9p4lbyimhIIrAIqnELV3EF3e_CoUrIA6QIm4Aj1KIKuBpAnDJ5AmKWakAClFImLArOFBmj2FpYrBpaZCLTADJ4eipKbDYTVCHfY2fASbDpSEg2Ap6iJWJw4WS2XnIyrA0hWS0)
 
 ### Kaynak
 
