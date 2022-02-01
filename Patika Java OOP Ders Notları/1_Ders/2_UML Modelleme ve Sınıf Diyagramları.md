@@ -130,3 +130,70 @@ Gerçekleştirim ilişkisi en çok kullanıcı arayüzlerinin **(user interface)
 ---
 
 ## Sınıf Diyagram Örnekleri
+
+### Sipariş İşlemleri Sınıf Tasarımı
+
+![Sipariş işlemleri Sınıf Tasarımı](http://www.plantuml.com/plantuml/png/ZPB9QiCm48RlVegfJrrGQAuz1P9BBrreNq1u9l4GBKOQKKpekxTE7A9WcTO7BzzlIVy_CwieEaYofhgHbYn1t9CqRQzy4iEEghNHCS8wHV6M0Xmg6Ay7O8GdO2SPSjhIBumIsEqohX43nLYIkjQxkJMtTzat8SiLG38aDABlu_tazZNWtrRFaPutizBBJ9ekU4oD55PgwvEJ2KOjmqORBVJ9blA2qTVHxJGfEm76QRWFySqU3l-oyvwqiFIb3CxdVnSBRZtojX-CN8x8zKY66YdfkT-tapHfn_NPNU1cAD7MU9rpwRlvuIXxPIoQpAivF2upNI_lQr1A1TwreXJKZul5ieRJ65K0unjuXUeSPy1ZAxmA5xmYXycQ7m00)
+
+* 0 veya 1 müşterinin (Customer) en az 1 veya daha fazla siparişi (Order) olabilir.
+
+* Siparişin(Order) ürünü (Product) vardır.
+
+* Stoğun (Stock) ürünü (Product) vardır.
+
+### Banka Yönetim Sistemi Sınıf Tasarımı
+
+![Örnek](http://www.plantuml.com/plantuml/png/fLF1hjCm4BptAqnE3r2GuFWEgALmB1Vw0rjxbLYDrvMzReaG_uvZHBIfemgfkLYQyUxCpiRRo10ukM7pXdjqgE8PMVVZHkLlFq2CwWlGMVqgmFIzLzeRLA_A4Wjmy1hOUif4v62fcxbMEI3eCBwypUJLMoFA8keKB8zBxhUGtwV8tc5OM21mM2bb78m96ECQPOtpbMiDmNnFxeIXeYvP_EQ3MSpOMIfEJzuFbTFTyI1Drf48pdd2yKwpLP2ud_kBsno08kZIRE9NWzffxHFnCgVrsKum06ciS8CN7os_P5I1cxgjcBbPxas0cxZrs7AzMv7OKOmcdLjJkmEUB7_DXnGQBnFwZP8Jw5zViiMggzKz7i3Ilp3n9oEPETmdilslG7x0rL9NYp-xsGVYvPWVMPjQNrxy7HpQpzEsbcZpiL5jcuyFdvhPvAlg8PQkCoIQ2hHKXrp-hhdx4Sgr38d2pHR993Vy0G00)
+
+* Bankanın (Bank) ATM, Müşteri (Customer), Hesap (Account) sınıfları vardır.
+* 1 müşterinin (Customer) en az 1 en çok 2 hesabı (Account) olabilir.
+* 1 hesap (Account) 0 veya daha fazla ATM işlemi yapabilir.
+* Hesap (Account) sınıfına ait iki tane alt sınıf vardır, Ana Hesap (Main Account) ve Birikim Hesabı (Saving Account).
+
+### Şirket Yönetim Sistemi Sınıf Tasarımı
+
+![Uml](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/oop/class-diagram-example/figures/company-systems.jpg)
+
+*Şirketin (Company) 0 veya daha fazla departman (Department) ve ofisi (Office) vardır.
+*Şirket (Company) olmadan departman (Department) ve ofis (Office) olamaz.
+*Bir departmanın (Department) en az bir çalışanı (Employee) olmalıdır.
+*Bir departman (Department) bir çalışan (Employee) tarafından yönetilir.
+*Ofise (Office) ait bir merkez ofis (Headquarter) olabilir.
+
+### Okul Yönetim Sistemi Sınıf Tasarımı
+
+![uml](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/oop/class-diagram-example/figures/school.jpg)
+
+* 1 okulun (School) en az bir veya daha fazla departmanı (Department) olabilir.
+* En az 1 veya daha fazla okulun (School) birden fazla öğrencisi (Student) olabilir.
+* 0 veya daha fazla öğrenci (Student) , en az 1 veya daha fazla ders (Subject) alabilir.
+* En az 1 veya daha fazla dersin (Subject), en az 1 veya daha fazla öğretmeni (Instructor) olabilir.
+* Bir departmanın (Department) en az 1 veya daha fazla dersi (Subject) olabilir.
+* Bir veya daha fazla departmana (Department), 1 veya daha fazla öğretmen (Instructor) atanabilir.
+
+### Sipariş Yönetim Sistemi Sınıf Tasarımı
+
+![uml](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/oop/class-diagram-example/figures/order.jpg)
+
+* Bir müşterinin 0 veya daha fazla siparişi olabilir.
+* Bir siparişe ait sipariş detayı ve ürünleri olur.
+* 1 siparişin birden fazla ödemesi olabilir.
+* Nakit , Çek ve Kredi Kartı ödeme yöntemleridir.
+
+## Ödev
+
+### Üniversite Yönetim Sistemi
+
+1 - Üniversiteye ait sınıflıklar, çalışma ofisleri ve departmanlar vardır.
+
+2 - Departmanlara ait ofisler vardır.
+
+3 - Üniversiteye ait çalışanlar vardır. Bu çalışanlar profesör veya memur olabilir.
+
+4 - Her çalışan bir ofiste çalışır.
+
+Bu sistemi tasvir eden Class (Sınıf) diyagramını çiziniz.
+
+Not : Sınıflara ait nitelik ve davranışların belirtilmesine gerek yoktur.
+
+![Cevap](http://www.plantuml.com/plantuml/png/ROrDgi9048JtSuf-sy1Su2qae2vSwSO334aD2SvFwEu80G-lZWGIaar3ytrLLOiwrZ46ywST8gXppGDiZi69q3trJx3qEXaYMhoKRMkfI9npbFzFJhQEfQltVODzNZfE61nhHD9zgVfAvpY4F045bhE8xUzSaeAzQx0EtpXxY6GMigDz7TRqrx9b1SuVMRRLF6Xgf7QCuGq0)
