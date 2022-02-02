@@ -157,3 +157,64 @@ Son Hali :
 ---
 
 ## Inheritance
+
+Kalıtım, programlama ortamında da gerçek hayattaki tanımına benzer bir işi gerçekleştirir. Bir sınıfın başka bir sınıftan kalıtım yapması demek, kalıtımı yapan sınıfın diğer sınıftaki nitelik ve davranışlarını kendisine alması demektir. Kalıtımı yapan sınıfa **alt sınıf**, kendisinden kalıtım yapılan sınıfa **ata sınıf** dersek, ata sınıfta tanımlı olan her şeyin alt sınıf için de tanımlı olduğunu söyleyebiliriz.
+
+Eğer bir A sınıfın B sınıfından kalıtım yapması isteniyorsa, aşağıda ki şekilde tanımlanır.
+
+```java
+public class A extend B {
+    // code goes here
+}
+```
+
+### Kalıtım Türleri
+
+#### Tek Yönlü Kalıtım (Single Inheritance)
+
+* Bir sınıfın başka bir sınıfı genişlettiği alt ve ata sınıf ilişkisini ifade eder.
+
+![Single Inheritance](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java102/inheritance/figures/kl1.png)
+
+#### Çoklu Kalıtım (Multiple Inheritance)
+
+* Bir sınıfın birden fazla sınıfı miras almasını ifade eder; bu, bir alt sınıfın iki ata sınıfa sahip olduğu anlamına gelir.  
+**Not : Java çoklu kalıtımı desteklemez. (Interface kullanılır)**
+
+![Multiple Inheritance](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java102/inheritance/figures/kl2.png)
+
+#### Çok seviyeli Kalıtım (Multilevel Inheritance)
+
+* Bir sınıfa ait alt sınıfın başka sınıfları genişletmesine denir.
+
+![Multilevel Inheritance](https://patika-prod.s3-eu-central-1.amazonaws.com/content/modules/oop/lessons/inheritance/zpxqtnLQrKGR5D2dh)
+
+#### Hiyerarşik Kalıtım (Hierarchical Inheritance)
+
+* Birden fazla sınıfın aynı sınıfı genişlettiği bir alt ve üst sınıf ilişkisini ifade eder.
+
+![Hierarchical Inheritance](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java102/inheritance/figures/kl4.png)
+
+#### Hibrit Kalıtım (Hybrid Inheritance)
+
+* Programda birden fazla kalıtım türünün kombinasyonuna denir. Örneğin, A ve B sınıfı, C sınıfını genişletir ve başka bir D sınıfı, A sınıfını genişletir, bu bir hibrit kalıtım örneğidir, çünkü bu, tek yönlü ve hiyerarşik kalıtımın bir birleşimidir.
+
+![Hybrid Inheritance](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java102/inheritance/figures/kl5.jpeg)
+
+### Kalıtım'da Constructor Zinciri ve Super Anahtar Sözcüğü
+
+Bir sınıfa ait nesne oluşturulurken, o sınıfın bir kurucusunun işletildiğini, kurucunun çalışması tamamlandıktan sonra bellekte artık bir nesnenin oluştuğunu biliyoruz. Kurucuları da nesneleri ilk oluşturuldukları anda anlamlı durumlara taşıyabilmek için kullanıyoruz. Bu durumda, eğer nesnesi oluşturulacak sınıf başka bir sınıfın alt sınıfıysa, önce ataya ait iç nesnesinin oluşturulması ve bu nesnenin niteliklerinin ilk değerlerinin verilmesi gerektiğini söyleyebiliriz.
+
+İç içe nesnelerin oluşabilmesi için nesnelerin içten dışa doğru oluşması gerekir. İç-nesnenin oluşabilmesi için, nesnesi oluşturulacak sınıfa ait kurucu işletilmeye başladığı zaman ilk iş olarak ata sınıfa ait kurucu çağrılır. Eğer ata sınıf da başka bir sınıfın alt sınıfıysa, bu kez o sınıfın kurucusu çağrılır. Kurucu zinciri alt sınıftan ata sınıfa doğru bu şekilde ilerler. En üstte, kalıtım ağacının tepesindeki sınıfın kurucusunun çalışması sonlandıktan sonra sırası ile alt sınıfların kurucularının çalışması sonlanacaktır. Böylece iç içe nesneler sıra ile oluşturularak en son en dıştaki nesne oluşturulmuş olur ve kurucu zinciri tamamlanır.
+
+### Super Kullanma
+
+Eğer ata sınıfta varsayılan kurucu yoksa ve programcı alt sınıftaki kurucunun içinde ata sınıfın hangi kurucusunun çağrılacağını belirtmezse derleme hatası alınacaktır. Çünkü derleyici aksi belirtilmedikçe ata sınıfın varsayılan kurucusunu çağıran super() kodunu üretecektir. Ata sınıfın hangi kurucusunun çağrılacağı, super anahtar sözcüğü ile birlikte verilen parametrelere göre belirlenir. Nasıl ki new işleci ile birlikte kullandığımız parametreler hangi kurucunun çağrılacağını belirliyorsa, super anahtar sözcüğü ile birlikte kullanılan parametreler de aynı şekilde ata sınıfın hangi kurucusunun işletileceğini belirler.
+
+Son Hali:
+
+![uml](http://www.plantuml.com/plantuml/png/RL59Rkf04DtNAVnt_-lBLuX8f8X5XYo856LPjWjJSWzE3vQSuIovGWx1mL8qZMW4Arxp1hrNNlY0BaIju4_OaARA3nJQpGojGk-hMpqgEnDL7r1NsAtiZ9sWG8hMrWYYUhGI0V-hdXtxl_y4jJnaD4lYi453ylhAaTS3TgJPpsHIQcDLrF8RpOH6F1qvJqjsXUM1T7H9tD4eTJKQmPeyChIes1VQf-stey1wQHrDGd7o3JZoevNqPpigD85JFSy6frSSotQUPSw-cLspNo465kbRvFTJvJqsHx721lUTBzI_OTNpziShqYcttrMJJ4FXnRhXBhgeeYuCopYHKJoSRcX8zRIpsOP2KaDvoxgEzUTLTVna5QIx7OZ3_m3d9ygI8WxojaiKvEa5dPy0vTRCfHPmjkcKXWMPBchr2m00)
+
+---
+
+## Polymorphism
